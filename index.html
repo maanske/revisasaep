@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Interativo de SQL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="gradient-bg text-white min-h-screen flex items-center justify-center p-4">
+
+    <main class="w-full max-w-2xl bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 space-y-8">
+
+        <header class="text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-cyan-400">Tutorial Interativo de SQL</h1>
+            <p class="text-gray-300 mt-2">Aprenda a diferenciar os comandos DDL, DML, DCL e TCL.</p>
+        </header>
+
+        <div class="space-y-6">
+            <div>
+                <label for="sql-command" class="block mb-2 font-medium text-gray-200">Digite um comando SQL e descubra seu grupo:</label>
+                <div class="flex space-x-2">
+                    <input type="text" id="sql-command" class="w-full bg-gray-700 border-2 border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition" placeholder="Ex: SELECT * FROM...">
+                    <button id="check-command-btn" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                        Verificar
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <p class="mb-3 font-medium text-gray-200">Ou clique em um grupo para ver a explicação:</p>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <button class="group-btn bg-blue-600 hover:bg-blue-700" data-group="DDL">🏗️ DDL</button>
+                    <button class="group-btn bg-green-600 hover:bg-green-700" data-group="DML">✍️ DML</button>
+                    <button class="group-btn bg-yellow-600 hover:bg-yellow-700" data-group="DCL">🔐 DCL</button>
+                    <button class="group-btn bg-purple-600 hover:bg-purple-700" data-group="TCL">⏳ TCL</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-area" class="bg-gray-900 bg-opacity-50 min-h-[150px] p-5 rounded-xl border border-gray-700">
+            <p class="text-gray-400">Seu resultado aparecerá aqui...</p>
+        </div>
+
+        <div class="border-t border-gray-700 pt-6">
+            <h2 class="text-xl font-bold text-center text-cyan-400 mb-4">⭐ Desafio Extra: Modo Teste</h2>
+            <div class="text-center">
+                <button id="quiz-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-6 rounded-lg transition duration-300">Iniciar Teste</button>
+                <div id="quiz-area" class="mt-4 text-lg hidden">
+                    <p id="quiz-question" class="mb-4"></p>
+                    <p id="quiz-feedback" class="font-medium"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
