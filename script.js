@@ -3,28 +3,28 @@ const sqlGroups = {
         name: 'Data Definition Language (Linguagem de Definição de Dados)',
         description: 'É usada para definir ou modificar a estrutura do banco de dados e seus objetos, como tabelas, índices e usuários.',
         examples: ['CREATE', 'ALTER', 'DROP'],
-        emoji: '🏗️',
+        emoji: '',
         color: 'blue'
     },
     'DML': {
         name: 'Data Manipulation Language (Linguagem de Manipulação de Dados)',
         description: 'É usada para consultar, inserir, atualizar e excluir dados dentro das tabelas do banco de dados.',
         examples: ['SELECT', 'INSERT', 'UPDATE', 'DELETE'],
-        emoji: '✍️',
+        emoji: '',
         color: 'green'
     },
     'DCL': {
         name: 'Data Control Language (Linguagem de Controle de Dados)',
         description: 'É usada para controlar o acesso aos dados no banco de dados, concedendo ou revogando permissões para os usuários.',
         examples: ['GRANT', 'REVOKE'],
-        emoji: '🔐',
+        emoji: '',
         color: 'yellow'
     },
     'TCL': {
         name: 'Transaction Control Language (Linguagem de Controle de Transação)',
         description: 'É usada para gerenciar as transações no banco de dados, garantindo a integridade dos dados ao confirmar ou desfazer alterações.',
         examples: ['COMMIT', 'ROLLBACK', 'SAVEPOINT'],
-        emoji: '⏳',
+        emoji: '',
         color: 'purple'
     }
 };
@@ -121,11 +121,11 @@ function generateQuizQuestion() {
  */
 function checkQuizAnswer(selectedGroup) {
     if (selectedGroup === currentQuizAnswer) {
-        quizFeedback.textContent = '✅ Certo! Próxima pergunta...';
+        quizFeedback.textContent = 'Certo! Próxima pergunta...';
         quizFeedback.className = 'font-medium text-green-400';
         setTimeout(generateQuizQuestion, 1500);
     } else {
-        quizFeedback.textContent = `❌ Errado! A resposta era ${currentQuizAnswer}. Tente a próxima.`;
+        quizFeedback.textContent = `Errado! A resposta era ${currentQuizAnswer}. Tente a próxima.`;
         quizFeedback.className = 'font-medium text-red-400';
         setTimeout(generateQuizQuestion, 2500);
     }
